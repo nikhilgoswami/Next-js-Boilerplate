@@ -10,7 +10,7 @@
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint",
-    "format": "next lint --fix && prettier  \"**/*.{js,ts,tsx,json,yml}\" --write --fix --ignore-path .gitignore ",
+    "format": "next lint --fix && prettier  \"./**/*.{js,ts,tsx,json,yml}\" --write --fix --ignore-path .gitignore ",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
     "commit": "cz",
