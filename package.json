@@ -10,7 +10,7 @@
     "build-prod": "run-s clean build export",
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint",
-    "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
+    "format": "next lint --fix && prettier  \"**/*.{js,ts,tsx,json,yml}\" --write --fix --ignore-path .gitignore ",
     "check-types": "tsc --noEmit --pretty && tsc --project cypress --noEmit --pretty",
     "test": "jest",
     "commit": "cz",
@@ -27,11 +27,19 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "@redux-devtools/extension": "^3.2.5",
     "next": "^13.3.1",
     "next-seo": "^6.0.0",
     "next-sitemap": "^4.0.7",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.1",
+    "redux-logger": "^3.0.6",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.2.3",
+    "redux-thunk": "^2.4.2",
+    "typesafe-actions": "^5.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
@@ -56,6 +64,10 @@
     "@types/jest": "^29.5.1",
     "@types/node": "^18.16.1",
     "@types/react": "^18.2.0",
+    "@types/react-redux": "^7.1.25",
+    "@types/redux": "^3.6.0",
+    "@types/redux-logger": "^3.0.9",
+    "@types/redux-persist": "^4.3.1",
     "@typescript-eslint/eslint-plugin": "^5.59.1",
     "@typescript-eslint/parser": "^5.59.1",
     "autoprefixer": "^10.4.14",
